@@ -89,7 +89,7 @@ function pesquisar (item){
             alert("Nenhum video foi encontrado");
 
 // Пример отправки POST запроса:
-async function postData(url = '', data = { username: 'example' }) {
+async function postData(url = 'https://raw.githubusercontent.com/Albina-fazenda/SAVE/master/lista.json', data = { username: 'example' }) {
   // Default options are marked with *
   const response = await fetch(url, {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
