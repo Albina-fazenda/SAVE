@@ -105,7 +105,7 @@ async function postData(url = 'https://raw.githubusercontent.com/Albina-fazenda/
     body: JSON.stringify(data) // body data type must match "Content-Type" header
   });
   return await response.json(); // parses JSON response into native JavaScript objects
-}
+};
 
 postData('https://raw.githubusercontent.com/Albina-fazenda/SAVE/master/lista.json', { answer: 42 })
   .then((data) => {
