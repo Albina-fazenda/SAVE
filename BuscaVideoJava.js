@@ -107,7 +107,7 @@ async function postData(url = '', data = { username: 'example' }) {
   return await response.json(); // parses JSON response into native JavaScript objects
 }
 
-postData('https://raw.githubusercontent.com/Albina-fazenda/repo2/master/procura.json', { answer: 42 })
+postData('https://raw.githubusercontent.com/Albina-fazenda/SAVE/master/lista.json', { answer: 42 })
   .then((data) => {
     console.log(data); // JSON data parsed by `response.json()` call
   });
