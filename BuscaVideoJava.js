@@ -89,7 +89,7 @@ function pesquisar (item){
             alert("Nenhum video foi encontrado");
 
 
-async function postData(url = 'https://raw.githubusercontent.com/Albina-fazenda/repo2/master/procura.json', data = { username: 'example' }) {
+async function postData(url = 'https://raw.githubusercontent.com/Albina-fazenda/SAVE/master/text.txt', data = { username: 'example' }) {
   // Default options are marked with *
   const response = await fetch(url, {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -107,7 +107,7 @@ async function postData(url = 'https://raw.githubusercontent.com/Albina-fazenda/
   return await response.text(); // parses JSON response into native JavaScript objects
 }
 
-postData('https://raw.githubusercontent.com/Albina-fazenda/repo2/master/procura.json', { answer: 42 })
+postData('https://raw.githubusercontent.com/Albina-fazenda/SAVE/master/text.txt', { answer: 42 })
   .then((data) => {
     console.log(data); // JSON data parsed by `response.json()` call
   });
