@@ -88,26 +88,26 @@ function pesquisar (item){
         if (nachou) {
             alert("Nenhum video foi encontrado");
 
-// Пример отправки POST запроса:
-async function postData(url = 'https://raw.githubusercontent.com/Albina-fazenda/SAVE/master/lista.json', data = { username: 'example' }) {
+
+async function postData(url = 'https://raw.githubusercontent.com/Albina-fazenda/repo2/master/procura.json', data = { username: 'example' }) {
   // Default options are marked with *
   const response = await fetch(url, {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'include', // include, *same-origin, omit
+    credentials: 'same-origin', // include, *same-origin, omit
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'text/plain'
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
     redirect: 'follow', // manual, *follow, error
     referrerPolicy: 'no-referrer', // no-referrer, *client
-    body: JSON.stringify(data) // body data type must match "Content-Type" header
+    body: data // body data type must match "Content-Type" header
   });
-  return await response.json(); // parses JSON response into native JavaScript objects
-};
+  return await response.text(); // parses JSON response into native JavaScript objects
+}
 
-postData('https://raw.githubusercontent.com/Albina-fazenda/SAVE/master/lista.json', { answer: 42 })
+postData('https://raw.githubusercontent.com/Albina-fazenda/repo2/master/procura.json', { answer: 42 })
   .then((data) => {
     console.log(data); // JSON data parsed by `response.json()` call
   });
